@@ -123,62 +123,41 @@ p {
     }
 }
 
-/* Adaptación para móviles */
 @media (max-width: 600px) {
     .container {
-        width: 70%;
-        /* Que el contenedor ocupe casi todo el ancho */
-        padding: 20px;
-        /* Menos padding para que no quede apretado */
-        border-radius: 10px;
-        /* Un poco más pequeño */
+        width: 90%;
+        padding: 30px 20px;
+        border-radius: 12px;
     }
 
     h1 {
         font-size: 2em;
-        /* Texto más pequeño en móvil */
-    }
-
-    .number {
-        font-size: 3em;
-        /* Ajusta si usas esta clase */
-    }
-
-    a button {
-        padding: 12px 25px;
-        /* Botón más pequeño y adaptado */
-        font-size: 1em;
     }
 
     p {
         font-size: 1em;
-        /* Texto más legible en móvil */
         line-height: 1.5;
     }
-    
 }
+
+/* Para pantallas hasta 400px (iPhone 14 y móviles pequeños) */
 @media (max-width: 400px) {
     .container {
-        width: 95%;        /* Que ocupe casi todo el ancho */
-        padding: 20px;     /* Menos padding para que no quede muy apretado */
+        width: 95%;
+        padding: 25px 15px;
         border-radius: 10px;
     }
 
     h1 {
-        font-size: 1.5em;  /* Texto más pequeño */
-    }
-
-    .number {
-        font-size: 2.5em;
-    }
-
-    a button {
-        padding: 10px 20px;
-        font-size: 0.9em;
+        font-size: 1.8em;
     }
 
     p {
         font-size: 0.9em;
         line-height: 1.4;
+    }
+
+    .container::before {
+        opacity: 0.25;  /* Un poco más transparente para que no moleste */
     }
 }

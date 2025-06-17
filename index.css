@@ -6,7 +6,7 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
+            overflow: auto;
         }
         .container {
     width: 80%;       /* Ocupa el 80% del ancho de la pantalla */

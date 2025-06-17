@@ -1,16 +1,19 @@
 body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: auto;
-        }
-        .container {
-    width: 80%;       /* Ocupa el 80% del ancho de la pantalla */
-    max-width: 500px; /* Pero nunca más ancho que 500px */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.container {
+    width: 80%;
+    /* Ocupa el 80% del ancho de la pantalla */
+    max-width: 500px;
+    /* Pero nunca más ancho que 500px */
     text-align: center;
     background: rgba(255, 255, 255, 0.9);
     padding: 40px;
@@ -19,78 +22,147 @@ body {
     animation: fadeIn 1s ease-in;
 }
 
-        h1 {
-            color: #333;
-            font-size: 3em;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .number {
-            color: #ff6b6b;
-            font-size: 4em;
-            font-weight: bold;
-            animation: bounce 2s infinite;
-        }
-        a button {
-            background-color: #4ecdc4;
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 25px;
-            font-size: 1.2em;
-            cursor: pointer;
-            transition: transform 0.3s, background-color 0.3s;
-            margin-top: 20px;
-        }
-        a button:hover {
-            background-color: #ff6b6b;
-            transform: scale(1.1);
-        }
-        p {
+h1 {
+    color: #333;
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.number {
+    color: #ff6b6b;
+    font-size: 4em;
+    font-weight: bold;
+    animation: bounce 2s infinite;
+}
+
+a button {
+    background-color: #4ecdc4;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    margin-top: 20px;
+}
+
+a button:hover {
+    background-color: #ff6b6b;
+    transform: scale(1.1);
+}
+
+p {
     text-align: justify;
 }
 
-        .confetti {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background: #f1c40f;
-            opacity: 0.8;
-            animation: fall 4s linear infinite;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.5); }
-            to { opacity: 1; transform: scale(1); }
-        }
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-20px); }
-            60% { transform: translateY(-10px); }
-        }
-        @keyframes fall {
-            0% { transform: translateY(-100vh) rotate(0deg); }
-            100% { transform: translateY(100vh) rotate(360deg); }
-        }
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #f1c40f;
+    opacity: 0.8;
+    animation: fall 4s linear infinite;
+}
 
-        /* Adaptación para móviles */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+/* Adaptación para móviles */
 @media (max-width: 600px) {
     .container {
-        width: 90%; /* Que el contenedor ocupe casi todo el ancho */
-        padding: 20px; /* Menos padding para que no quede apretado */
-        border-radius: 10px; /* Un poco más pequeño */
+        width: 90%;
+        /* Que el contenedor ocupe casi todo el ancho */
+        padding: 20px;
+        /* Menos padding para que no quede apretado */
+        border-radius: 10px;
+        /* Un poco más pequeño */
     }
+
     h1 {
-        font-size: 2em; /* Texto más pequeño en móvil */
+        font-size: 2em;
+        /* Texto más pequeño en móvil */
     }
+
     .number {
-        font-size: 3em; /* Ajusta si usas esta clase */
+        font-size: 3em;
+        /* Ajusta si usas esta clase */
     }
+
     a button {
-        padding: 12px 25px; /* Botón más pequeño y adaptado */
+        padding: 12px 25px;
+        /* Botón más pequeño y adaptado */
         font-size: 1em;
     }
+
     p {
-        font-size: 1em; /* Texto más legible en móvil */
+        font-size: 1em;
+        /* Texto más legible en móvil */
         line-height: 1.5;
+    }
+    
+}
+@media (max-width: 400px) {
+    .container {
+        width: 95%;        /* Que ocupe casi todo el ancho */
+        padding: 20px;     /* Menos padding para que no quede muy apretado */
+        border-radius: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;  /* Texto más pequeño */
+    }
+
+    .number {
+        font-size: 2.5em;
+    }
+
+    a button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    p {
+        font-size: 0.9em;
+        line-height: 1.4;
     }
 }

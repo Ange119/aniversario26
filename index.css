@@ -110,7 +110,7 @@ p {
 /* Adaptación para móviles */
 @media (max-width: 600px) {
     .container {
-        width: 90%;
+        width: 70%;
         /* Que el contenedor ocupe casi todo el ancho */
         padding: 20px;
         /* Menos padding para que no quede apretado */

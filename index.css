@@ -9,6 +9,7 @@ body {
             overflow: hidden;
         }
         .container {
+            width: 500px;
             text-align: center;
             background: rgba(255, 255, 255, 0.9);
             padding: 40px;
@@ -43,6 +44,10 @@ body {
             background-color: #ff6b6b;
             transform: scale(1.1);
         }
+        p {
+    text-align: justify;
+}
+
         .confetti {
             position: absolute;
             width: 10px;

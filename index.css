@@ -9,14 +9,16 @@ body {
             overflow: hidden;
         }
         .container {
-            width: 500px;
-            text-align: center;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            animation: fadeIn 1s ease-in;
-        }
+    width: 80%;       /* Ocupa el 80% del ancho de la pantalla */
+    max-width: 500px; /* Pero nunca más ancho que 500px */
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in;
+}
+
         h1 {
             color: #333;
             font-size: 3em;
@@ -69,3 +71,26 @@ body {
             0% { transform: translateY(-100vh) rotate(0deg); }
             100% { transform: translateY(100vh) rotate(360deg); }
         }
+
+        /* Adaptación para móviles */
+@media (max-width: 600px) {
+    .container {
+        width: 90%; /* Que el contenedor ocupe casi todo el ancho */
+        padding: 20px; /* Menos padding para que no quede apretado */
+        border-radius: 10px; /* Un poco más pequeño */
+    }
+    h1 {
+        font-size: 2em; /* Texto más pequeño en móvil */
+    }
+    .number {
+        font-size: 3em; /* Ajusta si usas esta clase */
+    }
+    a button {
+        padding: 12px 25px; /* Botón más pequeño y adaptado */
+        font-size: 1em;
+    }
+    p {
+        font-size: 1em; /* Texto más legible en móvil */
+        line-height: 1.5;
+    }
+}
